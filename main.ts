@@ -1,0 +1,13 @@
+startbit.startbit_Init()
+startbit.startbit_init_colorSensor(startbit.startbit_colorSensorPort.port4)
+startbit.setPWMServo(startbit.startbit_servorange.range1, 2, 0, 500)
+startbit.setPWMServo(startbit.startbit_servorange.range1, 3, 130, 500)
+startbit.setPWMServo(startbit.startbit_servorange.range1, 4, 130, 500)
+startbit.setPWMServo(startbit.startbit_servorange.range1, 5, 130, 500)
+startbit.setPWMServo(startbit.startbit_servorange.range1, 6, 130, 500)
+basic.forever(function () {
+    startbit.setPWMServo(startbit.startbit_servorange.range1, 1, 0, 500)
+    basic.pause(1000)
+    startbit.setPWMServo(startbit.startbit_servorange.range1, 1, 180, 500)
+    basic.pause(1000)
+})
